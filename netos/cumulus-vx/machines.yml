@@ -6,8 +6,8 @@
   name: "cumulus-vx"
   nested: false
   nics:
-    - type: "private_network"
-      ip_addr: "dhcp"
+    - ip_addr: "dhcp"
+      type: "private_network"
   ram: "512"
   sync_disabled: true
   vcpu: "1"
