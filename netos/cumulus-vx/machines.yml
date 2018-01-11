@@ -1,0 +1,13 @@
+---
+- box:
+    vmw: "CumulusCommunity/cumulus-vx"
+    vb: "CumulusCommunity/cumulus-vx"
+    lv: "CumulusCommunity/cumulus-vx"
+  name: "cumulus-vx"
+  nested: false
+  nics:
+    - type: "private_network"
+      ip_addr: "dhcp"
+  ram: "512"
+  sync_disabled: true
+  vcpu: "1"
