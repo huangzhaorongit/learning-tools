@@ -1,0 +1,7 @@
+DEPENDENCIES
+  enterprise-chef
+    path: .
+    metadata: true
+
+GRAPH
+  enterprise-chef (0.1.0)
