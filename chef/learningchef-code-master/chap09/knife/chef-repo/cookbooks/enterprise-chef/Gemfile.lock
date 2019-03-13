@@ -1,5 +1,5 @@
 GEM
-  remote: https://rubygems.org/
+  remote: https://gems.ruby-china.org//
   specs:
     kitchen-vagrant (0.15.0)
       test-kitchen (~> 1.0)
