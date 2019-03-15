@@ -1,0 +1,21 @@
+---
+galaxy_info:
+  author: Tim Kuhlman
+  description: Installs Apache Storm
+  company: HP
+  license: Apache
+  min_ansible_version: 1.7
+  platforms:
+  - name: Ubuntu
+    versions:
+    - trusty
+  - name: Debian
+    versions:
+    - jessie
+  - name: RedHat
+    versions:
+    - all
+  categories:
+  - clustering
+  - system
+dependencies: []

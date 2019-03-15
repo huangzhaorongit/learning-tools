@@ -1,0 +1,3 @@
+storm_supervisor_enabled: true
+zookeeper_hosts: vm1,vm2,vm3
+nimbus_host: vm1

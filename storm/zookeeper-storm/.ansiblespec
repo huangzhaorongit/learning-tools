@@ -1,0 +1,4 @@
+--- 
+- 
+  playbook: provisioning/playbooks/storm.yml
+  inventory: provisioning/inventory/static

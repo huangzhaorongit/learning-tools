@@ -1,0 +1,43 @@
+---
+apache_mirror: http://apache.mirrors.tds.net
+nimbus_thrift_port: 6627
+storm_drpc_extra_config:
+storm_local_dir: /var/storm
+storm_java_library_path: "/usr/local/lib:/opt/local/lib:/usr/lib"
+storm_nimbus_enabled: false
+storm_zookeeper_port: 2181
+storm_nimbus_extra_config:
+    nimbus.childopts: "-Xmx1024m -Djava.net.preferIPv4Stack=true"
+storm_supervisor_enabled: false
+storm_supervisor_extra_config:
+    supervisor.childopts: "-Xmx1024m -Djava.net.preferIPv4Stack=true"
+storm_topology_extra_config:
+    topology.acker.executors: 1
+    topology.debug: false
+storm_transactional_extra_config:
+    transactional.zookeeper.port: "{{ storm_zookeeper_port }}"
+    transactional.zookeeper.root: "/storm-transactional"
+storm_logviewer_enabled: false  # logviewer is used by the UI
+storm_ui_enabled: false
+storm_ui_port: 8088
+storm_ui_host: 127.0.0.1
+storm_ui_extra_config:
+    ui.childopts: "-Xmx768m -Djava.net.preferIPv4Stack=true"
+storm_version: 0.9.6
+storm_worker_extra_config:
+    worker.childopts: "-Xmx1280m -XX:+UseConcMarkSweepGC -Dcom.sun.management.jmxremote -Djava.net.preferIPv4Stack=true"
+storm_worker_ports: [6701, 6702, 6703, 6704]
+storm_zookeeper_extra_config:
+    storm.zookeeper.port:  "{{ storm_zookeeper_port }}"
+    storm.zookeeper.retry.interval: 5000
+    storm.zookeeper.retry.times: 29
+    storm.zookeeper.root: "/storm"
+    storm.zookeeper.session.timeout: 30000
+download_tmp_dir: /tmp
+storm_tarball_name: apache-storm-{{storm_version}}.tar.gz
+
+monasca_log_level: WARN
+monasca_wait_for_period: 60
+run_mode: Deploy
+skip_install: False
+verify: True

@@ -1,0 +1,7 @@
+---
+- name: Enable and Start Storm Supervisor
+  service: name=storm-supervisor state=started enabled=yes
+
+- name: Enable and Start Storm Logviewer
+  service: name=storm-logviewer state=started enabled=yes
+  when: storm_logviewer_enabled

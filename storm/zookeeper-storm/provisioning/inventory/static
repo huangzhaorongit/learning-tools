@@ -1,0 +1,10 @@
+[storm-nodes]
+vm1 ansible_host=192.168.33.23 ansible_user=vagrant
+vm2 ansible_host=192.168.33.24 ansible_user=vagrant
+vm3 ansible_host=192.168.33.25 ansible_user=vagrant
+
+[nimbus-host]
+vm1 ansible_host=192.168.33.23 ansible_user=vagrant
+
+[zookeeper-nodes]
+vm1 ansible_host=192.168.33.23 ansible_user=vagrant
