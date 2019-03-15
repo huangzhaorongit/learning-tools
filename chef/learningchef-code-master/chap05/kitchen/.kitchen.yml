@@ -8,6 +8,7 @@ provisioner:
 platforms:
   - name: centos65
     driver:
+      provider: virtualbox
       box: learningchef/centos65
       box_url: learningchef/centos65
       synced_folders:
