@@ -1,0 +1,104 @@
+.. _installation:
+
+************
+Installation
+************
+
+This document assumes the developer has a basic understanding of python
+packaging, and how to install and manage python on the system executing
+Molecule.
+
+Requirements
+============
+
+Depending on the driver chosen, you may need to install additional OS packages.
+See ``INSTALL.rst``, which is created when initializing a new scenario.
+
+* Python 2.7 or Python >= 3.5 with :std:doc:`Ansible <ansible:index>` >= 2.5
+
+CentOS 7
+--------
+
+.. code-block:: bash
+
+    $ sudo yum install -y epel-release
+    $ sudo yum install -y gcc python-pip python-devel openssl-devel libselinux-python
+
+Ubuntu 16.x
+-----------
+
+.. code-block:: bash
+
+    $ sudo apt-get update
+    $ sudo apt-get install -y python-pip libssl-dev
+
+Pip
+===
+
+:std:doc:`pip <pip:usage>` is the only supported installation method.
+
+Keep in mind that on selinux supporting systems, if you install into a virtual
+environment, you may face :gh:`issue <ansible/ansible/issues/34340>` even
+if selinux is not enabled or is configured to be permissive.
+
+It is your reponsability to assure that soft dependencies of Ansible are
+available on your controller or host machines.
+
+Requirements
+------------
+
+Depending on the driver chosen, you may need to install additional python
+packages.  See the driver's documentation or ``INSTALL.rst``, which is created
+when initializing a new scenario.
+
+Install
+-------
+
+Install Molecule:
+
+.. code-block:: bash
+
+    $ pip install --user molecule
+
+Installing molecule package also installed its main script ``molecule``,
+usually in ``PATH``. Users should know that molecule can also be called as a
+python module, using ``python -m molecule ...``. This alternative method has
+some benefits:
+
+* allows to explicitly control which python interpreter is used by molecule
+* allows molecule installation at user level without even needing to have
+  the script in ``PATH``.
+
+Source
+======
+
+Due to the rapid pace of development on this tool, you might want to install it
+in "`development mode`_" so that new updates can be obtained by simply doing a
+``git pull`` in the repository's directory.
+
+Requirements
+------------
+
+CentOS 7
+^^^^^^^^
+
+.. code-block:: bash
+
+    $ sudo yum install -y libffi-devel git
+
+Ubuntu 16.x
+^^^^^^^^^^^
+
+.. code-block:: bash
+
+    $ sudo apt-get install -y libffi-dev git
+
+Install
+-------
+
+.. code-block:: bash
+
+    $ cd /path/to/molecule/checkout
+    $ pip install -U -e .
+
+.. _`development mode`: https://setuptools.readthedocs.io/en/latest/setuptools.html#development-mode

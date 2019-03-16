@@ -1,0 +1,11 @@
+---
+- name: Converge
+  hosts: all
+  become: true
+  roles:
+    # Role from project root
+    - plugins
+    # Role from dependencies
+    - yatesr.ansible-timezone
+    # Role from provisioner provided env var
+    - molecule
