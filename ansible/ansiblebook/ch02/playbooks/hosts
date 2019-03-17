@@ -1,2 +1,3 @@
 [webservers]
-testserver ansible_host=127.0.0.1 ansible_port=2222
+testserver ansible_host=127.0.0.1 ansible_port=2222 ansible_user=vagrant ansible_private_key_file=/Users/huangzhaorongit/Documents/vagrantworkspace/learning-tools/ansible/ansiblebook/ch02/playbooks/.vagrant/machines/default/virtualbox/private_key
+

@@ -16,7 +16,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   end
 
   config.vm.define "precise" do |precise|
-    precise.vm.box = "precise64"
+    precise.vm.box = "hashicorp/precise64"
     precise.vm.network "private_network", ip: "192.168.4.12"
   end
 end

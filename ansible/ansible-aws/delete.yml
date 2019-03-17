@@ -3,7 +3,7 @@
   connection: "local"
   gather_facts: false
   vars:
-    region: "<insert AWS region here>"
+    region: "us-east-1"
 
   tasks:
   - name: "Remove tagged EC2 instances from security group"
@@ -26,7 +26,7 @@
   connection: "local"
   gather_facts: false
   vars:
-    region: "<insert AWS region here>"
+    region: "us-east-1"
 
   tasks:
   - name: "Remove security group"

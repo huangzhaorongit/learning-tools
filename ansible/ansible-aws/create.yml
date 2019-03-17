@@ -3,11 +3,11 @@
   connection: "local"
   gather_facts: false
   vars:
-    ami: "<insert AMI ID here>"
-    region: "<insert AWS region here>"
+    ami: "ami-0565af6e282977273"
+    region: "us-east-1"
     type: "t2.micro"
-    sshkey: "<insert SSH keypair name here>"
-    vpcid: "<insert VPC ID here>"
+    sshkey: "vagrantaws"
+    vpcid: "vpc-0f729099a559a446a"
 
   tasks:
   - name: "Create a new security group"
