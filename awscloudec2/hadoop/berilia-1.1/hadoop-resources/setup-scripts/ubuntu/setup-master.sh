@@ -103,7 +103,7 @@ sudo ln -s /usr/share/java/mysql-connector-java.jar /usr/lib/hive/lib/mysql-conn
 
 #setup hive
 sudo touch create-metastore.sql
-echo "CREATE DATABASE metastore;" | sudo tee --append create-metastore.sql
+echo "CREATE DATABASE IF NOT EXISTS metastore;" | sudo tee --append create-metastore.sql
 echo "USE metastore;" | sudo tee --append create-metastore.sql
 echo "SOURCE /usr/lib/hive/scripts/metastore/upgrade/mysql/hive-schema-1.1.0.mysql.sql;" | sudo tee --append create-metastore.sql
 echo "CREATE USER 'hive'@localhost IDENTIFIED BY 'hive';" | sudo tee --append create-metastore.sql
