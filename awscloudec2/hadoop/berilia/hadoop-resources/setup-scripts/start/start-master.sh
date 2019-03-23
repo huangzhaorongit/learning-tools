@@ -9,9 +9,7 @@ sudo service hadoop-hdfs-secondarynamenode restart
 sudo service hadoop-yarn-resourcemanager restart
 sudo service hadoop-yarn-nodemanager restart
 
-#install spark
-echo "Installing spark..."
-sudo apt-get -y install spark-core spark-history-server spark-python
+
 
 #Setup the staging dir (which is /user)
 #This is defined by yarn.app.mapreduce.am.staging-dir
@@ -38,4 +36,9 @@ sudo service hive-metastore restart
 sudo -u hdfs hdfs dfs -mkdir -p hdfs:///user/spark/applicationHistory
 sudo -u hdfs hadoop fs -chown -R spark:spark /user/spark
 sudo -u hdfs hdfs dfs -chmod 1777 hdfs:/user/spark/applicationHistory
+
+#install spark
+echo "Installing spark..."
+sudo apt-get -y install spark-core spark-history-server spark-python
+
 sudo service spark-history-server restart
