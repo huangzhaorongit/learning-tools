@@ -22,4 +22,4 @@ RUN mv create-metastore.sql /usr/lib/hive/scripts/metastore/upgrade/mysql/create
 #For some strange reason, docker intermediate containers do not maintain started services,
 #so have to do the below in one line
 
-RUN service mysql start && cd /usr/lib/hive/scripts/metastore/upgrade/mysql && mysql --user=root --password=root --protocol=tcp < "create-metastore.sql"
+RUN sudo chown -R mysql:mysql /var/lib/mysql /var/run/mysqld && service mysql start && cd /usr/lib/hive/scripts/metastore/upgrade/mysql && mysql --user=root --password=root --protocol=tcp < "create-metastore.sql"
