@@ -115,6 +115,8 @@ echo "FLUSH PRIVILEGES;" | sudo tee --append create-metastore.sql
 sudo mv create-metastore.sql /usr/lib/hive/scripts/metastore/upgrade/mysql/create-metastore.sql
 
 #We disabled start of services before
-sudo sudo chown -R mysql:mysql /var/lib/mysql /var/run/mysqld && service mysql start
+sudo sudo chown -R mysql:mysql /var/lib/mysql /var/run/mysqld
+
+sudo service mysql restart
 
 cd /usr/lib/hive/scripts/metastore/upgrade/mysql && mysql --user=root --password=root --protocol=tcp < "create-metastore.sql"
