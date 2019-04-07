@@ -5,7 +5,7 @@
 Ext.define('app.utils.Config', {
   alternateClassName : 'cfg', // 设置别名
   statics : {
-    systemname : '快速构建系统(Quick Build System)',
+    systemname : '能效管理平台',
     /** 登录界面 */
     xtypeLogin : 'login',
     /** 主窗口 */
