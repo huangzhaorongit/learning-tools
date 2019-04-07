@@ -1,0 +1,8 @@
+package com.distribution.wamoli.mapper;
+
+import com.distribution.wamoli.common.mapper.BaseMapper;
+import com.distribution.wamoli.domain.FOrganization;
+
+public interface FOrganizationMapper extends BaseMapper<FOrganization> {
+
+}

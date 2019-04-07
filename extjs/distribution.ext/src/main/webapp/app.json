@@ -1,0 +1,196 @@
+{
+    // 项目命名空间
+    "name": "app",
+    
+    // 项目版本号
+    "version": "1.0.0.0",
+
+    // 项目主页
+    "indexHtmlPath": "index.html",
+
+    // 源码和类库路径
+    "classpath": [
+        "app",	   // 框架库
+        "expand",  // 扩展库
+        "${toolkit.name}/src"
+    ],
+
+    // 重新类库路径
+    "overrides": [
+        "overrides",
+        "expand/overrides",
+        "${toolkit.name}/overrides"
+    ],
+
+    // 框架库名称
+    "framework": "ext",
+    
+    // classic的框架
+    "toolkit": "classic",
+    
+    // 界面主题
+    "theme": "theme-triton", // theme-neptune theme-crisp theme-triton
+    
+    "builds": {
+		"triton" : {
+			"theme" : "theme-triton"
+		},
+		"neptune" : {
+			"theme" : "theme-neptune"
+		},
+		"crisp" : {
+			"theme" : "theme-crisp"
+		},  
+		"classic" : {
+			"theme" : "theme-classic"
+		},
+		"gray" : {
+			"theme" : "theme-gray"
+		},
+		"aria" : {
+			"theme" : "theme-aria"
+		}
+    },
+    
+    // 需要使用到的库和功能
+    "requires": [
+        "font-awesome",
+    	"locale",
+    	"ux"
+    ],
+    
+	"locale" : "zh_CN",
+	
+    // 可以被编译到系统中的sass的定义
+    "sass": {
+        "namespace": "app",
+        "etc": [
+            "sass/etc/all.scss",
+            "${toolkit.name}/sass/etc/all.scss"
+        ],
+        "var": [
+            "sass/var/all.scss",
+            "sass/var",
+            "${toolkit.name}/sass/var"
+        ],
+        "src": [
+            "sass/src",
+            "${toolkit.name}/sass/src"
+        ]
+    },
+    // 各个js文件的加载设置
+    "js": [
+        {"path": "app.js","bundle": true},
+        {"path": "expand/overrides/utils/Overrides.js"},
+        {"path": "expand/plugin/swfupload/swfupload.js"},
+        {"path": "expand/plugin/jquery/jquery-1.9.1.min.js"},
+        {"path": "expand/plugin/echars/echarts.min.js"},
+        {"path": "expand/plugin/mobiscroll/js/mobiscroll.core-2.6.2.js"},
+        {"path": "expand/plugin/mobiscroll/js/mobiscroll.android-ics-2.6.2.js"},
+        {"path": "expand/plugin/mobiscroll/js/mobiscroll.datetime-2.6.2.js"}
+    ],
+    // classic框架库文件
+    "classic": {
+        "js": [
+            {
+                "path": "${framework.dir}/build/ext-all-rtl-debug.js"
+            }
+        ]
+    },
+
+    "modern": {
+        "js": [
+            {
+                "path": "${framework.dir}/build/ext-modern-all-debug.js"
+            }
+        ]
+    },
+    // 各个需要加入到系统中的css
+    "css": [
+        {"path": "${build.out.css.path}","bundle": true, "exclude": ["fashion"]},
+		{"path": "resources/css/style.css"},
+		{"path": "resources/css/toggleslide.css"},
+		{"path": "expand/plugin/mobiscroll/css/mobiscroll.core-2.6.2.css"},
+		{"path": "expand/plugin/mobiscroll/css/mobiscroll.android-ics-2.6.2.css"}
+    ],
+
+    // 动态加载文件时的缓存设置
+    "loader": {
+         "cache": false,
+         "cacheParam": "_dc"
+    },
+
+    // 生成发布包的一些设置
+    "production": {
+        "output": {
+            "appCache": {
+                "enable": true,
+                "path": "cache.appcache"
+            }
+        },
+        "loader": {
+            "cache": "${build.timestamp}"
+        },
+        "cache": {
+            "enable": true
+        }
+    },
+    
+    "testing": {
+    },
+    
+    "development": {
+        "tags": [
+        ]
+    },
+
+    // 系统引导程序的设置
+    "bootstrap": {
+        "base": "${app.dir}",  
+	    "microloader": "bootstrap.js",  
+	    //"manifest": "${build.id}.json", 
+	    "manifest": "build/development/app/${build.id}/${build.id}.json", 
+	    "css": "bootstrap.css"  
+    },
+
+    // 各类发布文件的设置
+    "output": {
+        "base": "${workspace.build.dir}/${build.environment}/${app.name}",
+        "appCache": {
+            "enable": false
+        },
+        "resources": {  
+	      	"path": "${build.id}/resources",  
+	      	"shared": "resources"  
+	    } 
+    },
+    "cache": {
+        "enable": false,
+        "deltas": true
+    },
+    "appCache": {
+        "cache": [
+            "index.html"
+        ],
+        "network": [
+            "*"
+        ],
+        "fallback": []
+    },
+
+    // 各类其他附加资源文件的定义
+    "resource": {
+        "paths": [
+           // "resources",
+            "${toolkit.name}/resources"
+        ]
+    },
+
+    "ignore": [
+        "(^|/)CVS(/?$|/.*?$)"
+    ],
+
+    "archivePath": "archive",
+
+    "id": "e13780b7-397a-431c-ae7c-296f9558aaf6"
+}

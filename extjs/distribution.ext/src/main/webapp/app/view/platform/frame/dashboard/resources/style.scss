@@ -1,0 +1,171 @@
+$panel-navigation-background-color: #32404e;
+$panel-header-background-color:#5fa2dd;
+$panel-navigation-item-line-height:66px;
+$panel-navigation-item-text-color: #ADB3B8;
+$navbase-color:#35baf6;
+$lightest-color:#fff;
+$accordion-header-background-color: $lightest-color;
+$button-toolbar-hover-background-color: #efefef;
+
+@include treelist-ui(
+    $ui: 'navigation',
+    $padding: 0 10px,
+
+    // Black-ish background color
+    $background-color: $panel-navigation-background-color,
+    $toolstrip-background-color: #32404e,
+
+    $tool-float-indicator-color: $panel-header-background-color,
+    $tool-float-indicator-width: 5px,
+
+    $tool-indicator-selected-color: $panel-header-background-color,
+    $tool-indicator-selected-width: 5px,
+    $tool-selected-background-color: mix(white, $panel-navigation-background-color, 10%),
+    //$tool-selected-color: #fff,
+    //$tool-selected-background-color: $panel-header-background-color,
+
+    // Darker background for expanded subtrees
+    $item-expanded-background-color: #2c3845,
+
+    // Taller line height
+    $item-line-height : $panel-navigation-item-line-height,
+
+    $row-over-background-color: mix(white, $panel-navigation-background-color, 5%),
+    $row-selected-background-color: mix(white, $panel-navigation-background-color, 10%),
+
+    // Off-white text
+    $item-icon-color: $panel-navigation-item-text-color,
+    $item-expander-color: #fff,
+    $item-text-color: #ADB3B8,
+
+    // Brighter when hovered
+    $item-icon-over-color: #fff,
+    $item-expander-over-color: #fff,
+    $item-text-over-color: mix(white, $panel-navigation-item-text-color, 50%),
+    $item-text-font-size: 14px,
+
+    // Various sizes for the pieces:
+    $item-icon-font-size: 18px,
+    $item-icon-width: 44px,
+    $item-expander-font-size: 16px,
+    $item-expander-width: 24px,
+
+    // Style the "row indicator" (the vertical stripe on the left edge):
+    $row-indicator-width: 5px,
+    $row-indicator-selected-color: $panel-header-background-color,
+    $row-indicator-selected-over-color: lighten($panel-header-background-color, 7%),
+    $row-indicator-over-color: transparent
+);
+
+.treelist-with-nav .#{$prefix}panel-body {
+    background-color: $panel-navigation-background-color;
+}
+
+.sencha-logo {
+    background-color: $navbase-color;
+    height: 65px;
+
+    font-size: 16px;
+    color: $lightest-color;
+    margin-left: 17px;
+
+    .main-logo {
+        line-height: 65px;
+        img{
+            margin-left: 22px;
+            margin-right: 22px;
+            top: 8px;
+            position: relative;
+        }
+    }
+}
+
+.sencha-dash-dash-headerbar {
+    padding:0 30px 0 0;
+    position:fixed;
+    width:100%;
+    z-index:10;
+    border:none;
+    .header-right-profile-image {
+        border-radius: 20px;
+    }
+}
+.top-english-button{
+    .x-btn-icon-el{
+        width:21px;
+        height:14px;
+    }
+}
+.collapsed{
+    .hot-icon,.new-icon{
+        &:after{
+            display:none;
+        }
+    }
+    .x-tree-elbow-img{
+        display:none;
+    }
+
+    .x-tree-node-text {
+        display:none;
+    }
+}
+.x-grid-cell{
+    position:relative;
+}
+.hot-icon,.new-icon{
+    &.hot-icon:after{
+        content: "HOT";
+        background:#e3495a;
+    }
+    &.new-icon:after{
+        content: "NEW";
+        background:$navbase-color;
+    }
+    &:after{
+        height: 18px;
+        width: 34px;
+        display: inline-block;
+        position: absolute;
+        top: 22px;
+        right: -180px;
+        text-align:center;
+        color: $lightest-color;
+        font-weight: bold;
+        font-size: 10px;
+        line-height: 18px;
+    }
+}
+
+.x-treelist-item-tool {
+    height: $panel-navigation-item-line-height;
+    &.hot-icon:after, &.new-icon:after{
+        background: $panel-header-background-color;
+        content: '';
+    }
+}
+
+.toolbar-btn-shadow{
+    @include box-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+    .x-btn-over{
+        background-color: $button-toolbar-hover-background-color;
+    }
+}
+
+//Add border around html editor field
+.x-html-editor-input{
+    border:1px solid #ccc;
+}
+
+.delete-focus-bg {
+    &:focus, &:hover{
+        background: none;
+    }
+}
+
+.shadow {
+    -webkit-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    -ms-box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
