@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.distribution.wamoli.mapper.FDatatranscontrlMapper">
+  <resultMap id="BaseResultMap" type="com.distribution.wamoli.domain.FDatatranscontrl">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="id" jdbcType="VARCHAR" property="id" />
+    <result column="interfacetype" jdbcType="VARCHAR" property="interfacetype" />
+    <result column="interfacename" jdbcType="VARCHAR" property="interfacename" />
+    <result column="interfacemethod" jdbcType="VARCHAR" property="interfacemethod" />
+    <result column="interfacedesc" jdbcType="VARCHAR" property="interfacedesc" />
+    <result column="lasttranstime" jdbcType="TIMESTAMP" property="lasttranstime" />
+    <result column="custom1" jdbcType="VARCHAR" property="custom1" />
+    <result column="custom2" jdbcType="VARCHAR" property="custom2" />
+    <result column="custom3" jdbcType="VARCHAR" property="custom3" />
+  </resultMap>
+</mapper>

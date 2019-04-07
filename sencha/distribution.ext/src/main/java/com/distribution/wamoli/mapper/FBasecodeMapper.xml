@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.distribution.wamoli.mapper.FBasecodeMapper">
+  <resultMap id="BaseResultMap" type="com.distribution.wamoli.domain.FBasecode">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="codetype" jdbcType="VARCHAR" property="codetype" />
+    <id column="codeid" jdbcType="VARCHAR" property="codeid" />
+    <result column="codename" jdbcType="VARCHAR" property="codename" />
+    <result column="codename1" jdbcType="VARCHAR" property="codename1" />
+    <result column="pinyincode" jdbcType="VARCHAR" property="pinyincode" />
+    <result column="parentcodeid" jdbcType="VARCHAR" property="parentcodeid" />
+    <result column="color" jdbcType="VARCHAR" property="color" />
+    <result column="isvalid" jdbcType="CHAR" property="isvalid" />
+    <result column="custom1" jdbcType="VARCHAR" property="custom1" />
+    <result column="custom2" jdbcType="VARCHAR" property="custom2" />
+    <result column="custom3" jdbcType="VARCHAR" property="custom3" />
+    <result column="custom4" jdbcType="VARCHAR" property="custom4" />
+    <result column="custom5" jdbcType="VARCHAR" property="custom5" />
+    <result column="custom6" jdbcType="DECIMAL" property="custom6" />
+    <result column="custom7" jdbcType="DECIMAL" property="custom7" />
+  </resultMap>
+  
+  
+  
+  
+</mapper>

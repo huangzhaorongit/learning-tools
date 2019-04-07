@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.distribution.wamoli.mapper.FSystemuserLimitsMapper">
+  <resultMap id="BaseResultMap" type="com.distribution.wamoli.domain.FSystemuserLimits">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="userid" jdbcType="VARCHAR" property="userid" />
+    <id column="menuid" jdbcType="VARCHAR" property="menuid" />
+    <id column="operatecode" jdbcType="VARCHAR" property="operatecode" />
+    <result column="companyid" jdbcType="VARCHAR" property="companyid" />
+    <result column="custom1" jdbcType="VARCHAR" property="custom1" />
+    <result column="custom2" jdbcType="VARCHAR" property="custom2" />
+    <result column="custom3" jdbcType="VARCHAR" property="custom3" />
+  </resultMap>
+</mapper>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.distribution.wamoli.mapper.FPersonnelMapper">
+  <resultMap id="BaseResultMap" type="com.distribution.wamoli.domain.FPersonnel">
+    <!--
+      WARNING - @mbggenerated
+    -->
+    <id column="personnelid" jdbcType="VARCHAR" property="personnelid" />
+    <result column="personnelcode" jdbcType="VARCHAR" property="personnelcode" />
+    <result column="personnelname" jdbcType="VARCHAR" property="personnelname" />
+    <result column="departmentid" jdbcType="VARCHAR" property="departmentid" />
+    <result column="companyid" jdbcType="VARCHAR" property="companyid" />
+    <result column="position" jdbcType="VARCHAR" property="position" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="birthdate" jdbcType="DATE" property="birthdate" />
+    <result column="workdate" jdbcType="DATE" property="workdate" />
+    <result column="firstprofessional" jdbcType="VARCHAR" property="firstprofessional" />
+    <result column="firsteducation" jdbcType="VARCHAR" property="firsteducation" />
+    <result column="firstcollage" jdbcType="VARCHAR" property="firstcollage" />
+    <result column="education" jdbcType="VARCHAR" property="education" />
+    <result column="degree" jdbcType="VARCHAR" property="degree" />
+    <result column="professional" jdbcType="VARCHAR" property="professional" />
+    <result column="collage" jdbcType="VARCHAR" property="collage" />
+    <result column="maritalstatus" jdbcType="VARCHAR" property="maritalstatus" />
+    <result column="idcode" jdbcType="VARCHAR" property="idcode" />
+    <result column="insurcode" jdbcType="VARCHAR" property="insurcode" />
+    <result column="homeaddress" jdbcType="VARCHAR" property="homeaddress" />
+    <result column="postalcode" jdbcType="VARCHAR" property="postalcode" />
+    <result column="officetel" jdbcType="VARCHAR" property="officetel" />
+    <result column="mobile" jdbcType="VARCHAR" property="mobile" />
+    <result column="email" jdbcType="VARCHAR" property="email" />
+    <result column="politicalface" jdbcType="VARCHAR" property="politicalface" />
+    <result column="joindate" jdbcType="DATE" property="joindate" />
+    <result column="photo" jdbcType="VARCHAR" property="photo" />
+    <result column="isvalid" jdbcType="CHAR" property="isvalid" />
+    <result column="attachsnum" jdbcType="SMALLINT" property="attachsnum" />
+    <result column="creater" jdbcType="VARCHAR" property="creater" />
+    <result column="createdate" jdbcType="TIMESTAMP" property="createdate" />
+    <result column="lastmodifier" jdbcType="VARCHAR" property="lastmodifier" />
+    <result column="lastmodifydate" jdbcType="TIMESTAMP" property="lastmodifydate" />
+    <result column="custom1" jdbcType="VARCHAR" property="custom1" />
+    <result column="custom2" jdbcType="VARCHAR" property="custom2" />
+    <result column="custom3" jdbcType="VARCHAR" property="custom3" />
+    <result column="custom4" jdbcType="VARCHAR" property="custom4" />
+    <result column="custom5" jdbcType="VARCHAR" property="custom5" />
+    <result column="custom6" jdbcType="DECIMAL" property="custom6" />
+    <result column="custom7" jdbcType="DECIMAL" property="custom7" />
+    <result column="workremark" jdbcType="LONGVARCHAR" property="workremark" />
+  </resultMap>
+  
+
+ 
+	
+</mapper>
