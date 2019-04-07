@@ -1,9 +1,0 @@
-  ${AnsiColor.GREEN}       __ ${AnsiColor.RED} ____    __    ____  ___      .___  ___.   ______    __       __
-  ${AnsiColor.GREEN}      |  |${AnsiColor.RED} \   \  /  \  /   / /   \     |   \/   |  /  __  \  |  |     |  |
-  ${AnsiColor.GREEN}      |  |${AnsiColor.RED}  \   \/    \/   / /  ^  \    |  \  /  | |  |  |  | |  |     |  |
-  ${AnsiColor.GREEN}.--.  |  |${AnsiColor.RED}   \            / /  /_\  \   |  |\/|  | |  |  |  | |  |     |  |
-  ${AnsiColor.GREEN}|  `--'  |${AnsiColor.RED}    \    /\    / /  _____  \  |  |  |  | |  `--'  | |  `----.|  |
-  ${AnsiColor.GREEN} \______/ ${AnsiColor.RED}     \__/  \__/ /__/     \__\ |__|  |__|  \______/  |_______||__|
-
-${AnsiColor.BRIGHT_BLUE}:: JWamoli :: Running Spring Boot ${spring-boot.version} ::
-:: http://www.wamoli.cn ::${AnsiColor.DEFAULT}
